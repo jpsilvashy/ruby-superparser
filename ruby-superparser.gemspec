@@ -4,7 +4,7 @@ require_relative "lib/ruby/superparser/version"
 
 Gem::Specification.new do |spec|
   spec.name = "ruby-superparser"
-  spec.version = Ruby::Superparser::VERSION
+  spec.version = RubySuperparser::VERSION
   spec.authors = ["JP Silvashy"]
   spec.email = ["jpsilvashy@gmail.com"]
 

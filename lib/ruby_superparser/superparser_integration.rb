@@ -10,7 +10,7 @@ module RubySuperparser
         
         define_method :process_document_with_superparser do
           if options[:async]
-            RubySuperparser::DocumentProcessorWorker.perform_async(id)
+            RubySuperparser.config.async.call(id)
           else
             superparser_client.parse_resume(send(attached_attribute))
           end
@@ -21,8 +21,9 @@ module RubySuperparser
     private
 
     def superparser_client
-      api_key = ENV['SUPERPARSER_API_KEY']
-      @superparser_client ||= RubySuperparser::Client.new(api_key)
+      @superparser_client ||= RubySuperparser::Client.new(RubySuperparser.config)
     end
+
   end
 end
+
