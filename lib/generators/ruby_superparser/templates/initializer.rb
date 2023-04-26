@@ -1,6 +1,6 @@
-# lib/generators/ruby_superparser/templates/initializer.rb
+# lib/generators/superparser/templates/initializer.rb
 
-RubySuperparser.init do |config|
+Superparser.init do |config|
   config.api_key = ENV['SUPERPARSER_API_KEY']
 
   config.async = lambda { |document_id|

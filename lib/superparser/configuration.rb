@@ -1,4 +1,4 @@
-module RubySuperparser
+module Superparser
   class Configuration
     attr_accessor :api_key, :async
 

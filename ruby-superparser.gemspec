@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require_relative "lib/ruby/superparser/version"
+require_relative "lib/superparser/version"
 
 Gem::Specification.new do |spec|
   spec.name = "ruby-superparser"
-  spec.version = RubySuperparser::VERSION
+  spec.version = Superparser::VERSION
   spec.authors = ["JP Silvashy"]
   spec.email = ["jpsilvashy@gmail.com"]
 

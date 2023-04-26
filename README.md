@@ -35,10 +35,10 @@ export SUPERPARSER_API_KEY=your_api_key_here
 To use this gem in a Rails application, run the generator to create an initializer:
 
 ```sh
-rails generate ruby_superparser:install
+rails generate superparser:install
 ```
 
-This will create a `config/initializers/ruby_superparser.rb` file, which initializes the `SUPERPARSER_CLIENT` constant.
+This will create a `config/initializers/superparser.rb` file, which initializes the `SUPERPARSER_CLIENT` constant.
 
 Now you can use the gem throughout your Rails application:
 
@@ -52,11 +52,11 @@ puts json_result
 In other Ruby applications, create a `Client` instance and use it to parse resumes:
 
 ```ruby
-require 'ruby_superparser'
+require 'superparser'
 
 api_key = ENV['SUPERPARSER_API_KEY']
-client = RubySuperparser::Client.new(api_key)
-json_result = client.parse_resume('path/to/your/resume.pdf')
+client = Superparser::Client.new(api_key)
+json_result = client.parse('path/to/your/resume.pdf')
 puts json_result
 ```
 
